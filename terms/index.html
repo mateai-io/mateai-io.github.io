@@ -14,15 +14,16 @@
     <meta property="og:url" content="https://mateai-io.github.io/terms/" />
     <meta property="og:description" content="Terms of Service for the MateAI desktop app and MCP server." />
     <meta property="og:image" content="https://mateai-io.github.io/og.png" />
-    <script type="module" crossorigin src="/assets/terms-Bs7LZw6m.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/SiteHeader-dLyeaRmV.js">
+    <script type="module" crossorigin src="/assets/terms-Dcy25f-2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/SiteHeader-CNOPVM1x.js">
+    <link rel="modulepreload" crossorigin href="/assets/LegalPage-Cfls9ZSw.js">
     <link rel="stylesheet" crossorigin href="/assets/SiteHeader-CDjuOxl8.css">
-    <link rel="stylesheet" crossorigin href="/assets/terms-jJAub0zS.css">
+    <link rel="stylesheet" crossorigin href="/assets/LegalPage-jJAub0zS.css">
   </head>
   <body>
     <div id="root"><div class="site"><a class="skip btn btn-secondary" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><nav aria-label="Main" style="display:contents"><ul class="site-nav"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#privacy">Privacy</a></li><li><a href="/#faq">FAQ</a></li></ul></nav></div></header><main id="main" class="wrap legal"><h1 id="terms-of-service">Terms of Service</h1>
 <p><strong>MateAI</strong></p>
-<p><strong>Last Updated:</strong> November 5, 2026<br><strong>Effective Date:</strong> November 5, 2026  </p>
+<p><strong>Last Updated:</strong> November 6, 2026<br><strong>Effective Date:</strong> November 5, 2026  </p>
 <hr>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
@@ -46,6 +47,7 @@
 <hr>
 <h2 id="1-agreement-to-terms">1. Agreement to Terms</h2>
 <p>These Terms of Service (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;User&quot;, &quot;you&quot;, or &quot;your&quot;) and MateAI (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) governing your access to and use of the MateAI desktop companion application, the Model Context Protocol (MCP) server, and associated software tools (collectively, the &quot;Software&quot;).</p>
+<p>MateAI is operated by Máté Góg, sole trader (Einzelunternehmen), 8412 Allerheiligen bei Wildon, Austria. Email: <a href="mailto:gog.mate@gmail.com">gog.mate@gmail.com</a>. Full legal notice: <a href="https://mateai-io.github.io/impressum/">Impressum</a>.</p>
 <p>By downloading, installing, compiling, or executing the Software, you confirm that you have read, understood, and agreed to be bound by these Terms, as well as our <a href="https://mateai-io.github.io/privacy">Privacy Policy</a>.</p>
 <p><strong>YouTube API Services Integration:</strong><br>MateAI connects to and uses the official YouTube Data API and YouTube Analytics API. By using MateAI to interact with YouTube, you acknowledge and agree that you are also bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <blockquote>
@@ -53,7 +55,7 @@
 </blockquote>
 <hr>
 <h2 id="2-description-of-service">2. Description of Service</h2>
-<p>MateAI provides an open, local-first desktop application and MCP server designed to connect your YouTube channel and analytics data to local artificial intelligence assistants (such as Claude Desktop and Claude Code).</p>
+<p>MateAI provides a local-first desktop application and MCP server designed to connect your YouTube channel and analytics data to local artificial intelligence assistants (such as Claude Desktop and Claude Code).</p>
 <p>The Software operates locally on your device. MateAI does not operate remote intermediate proxy servers, cloud message relays, or centralized databases that store your credentials or private channel content. All API requests originate directly from your computer to Google/YouTube endpoints.</p>
 <blockquote>
 <p><strong>In Plain English:</strong> MateAI is software that runs on your personal computer. There is no cloud middleman reading or storing your channel data.</p>
@@ -61,10 +63,10 @@
 <hr>
 <h2 id="3-user-accounts-and-credential-custody">3. User Accounts and Credential Custody</h2>
 <p>You do not create an account with MateAI. Access to YouTube data is authenticated using Google&#39;s official OAuth 2.0 protocol with loopback redirect and Proof Key for Code Exchange (PKCE).</p>
-<p>OAuth access and refresh tokens are stored securely in your operating system&#39;s native credential store (macOS Keychain). You are solely responsible for maintaining physical and digital security of your device. MateAI never collects, transmits, or possesses copies of your authentication tokens.</p>
+<p>OAuth access and refresh tokens stay on your device. The MateAI desktop app stores them in your operating system&#39;s native credential store (macOS Keychain). If you run the MCP server on its own (for example as a Claude Code plugin), it stores them in a file in its data folder that only your user account can read. You are solely responsible for maintaining physical and digital security of your device. MateAI never collects, transmits, or possesses copies of your authentication tokens.</p>
 <p>You must be at least 13 years old (or 16 years old within the European Union) to use this Software, or have the consent of a parent or legal guardian.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> You authenticate directly with Google. Your login tokens stay locked in your macOS Keychain on your computer.</p>
+<p><strong>In Plain English:</strong> You authenticate directly with Google. Your login tokens stay on your computer: in the macOS Keychain with the desktop app, or in a private file when you use the MCP server on its own.</p>
 </blockquote>
 <hr>
 <h2 id="4-acceptable-use-policy">4. Acceptable Use Policy</h2>
@@ -87,10 +89,11 @@
 </blockquote>
 <hr>
 <h2 id="6-intellectual-property-and-licensing">6. Intellectual Property and Licensing</h2>
-<p>The Software source code is made available under the licensing terms set forth in the repository at <a href="https://github.com/mateai-io/mateai-desktop">github.com/mateai-io/mateai-desktop</a>.</p>
-<p>All trademarks, logos, and brand elements of MateAI belong to their respective owners. YouTube is a registered trademark of Google LLC. Claude is a registered trademark of Anthropic PBC. MateAI is an independent open-source project and is not affiliated with, sponsored by, or endorsed by Google LLC or Anthropic PBC.</p>
+<p>The MateAI desktop app is owned by Máté Góg. We grant you a free, personal, non-exclusive and non-transferable license to install and use it on computers you own or control, to manage your own channels. You may not sell, rent or redistribute the app or remove its notices. This license ends if you materially breach these Terms.</p>
+<p>The MateAI MCP server is open source under the Apache License 2.0, published at <a href="https://github.com/mategog/mateai-youtube-mcp">github.com/mategog/mateai-youtube-mcp</a>. That license, not this section, governs the MCP server&#39;s source code.</p>
+<p>All trademarks, logos, and brand elements of MateAI belong to their respective owners. YouTube is a registered trademark of Google LLC. Claude is a registered trademark of Anthropic PBC. MateAI is an independent project and is not affiliated with, sponsored by, or endorsed by Google LLC or Anthropic PBC.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> MateAI is an independent open-source project. Google, YouTube, and Claude are trademarks of their respective companies.</p>
+<p><strong>In Plain English:</strong> You can use the MateAI app for free on your own computer for your own channels, but please don&#39;t resell or redistribute it. The MCP server is open source (Apache 2.0). Google, YouTube and Claude are trademarks of their companies, and MateAI isn&#39;t affiliated with them.</p>
 </blockquote>
 <hr>
 <h2 id="7-payment-terms-and-pricing">7. Payment Terms and Pricing</h2>
@@ -127,27 +130,21 @@
 </blockquote>
 <hr>
 <h2 id="11-disclaimers-and-warranties">11. Disclaimers and Warranties</h2>
-<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
-<p>WE DO NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, UNINTERRUPTED, OR COMPATIBLE WITH ALL FUTURE VERSIONS OF YOUTUBE APIS OR OPERATING SYSTEM RELEASES. USERS ARE ENCOURAGED TO USE THE BUILT-IN DRY-RUN FEATURE BEFORE PUBLISHING REAL CHANGES.</p>
+<p>The Software is provided free of charge. We do not promise that it will be error-free or uninterrupted, that it will achieve any particular result for your channel, or that it will stay compatible with future versions of YouTube APIs or operating systems. Your mandatory statutory rights remain unaffected. We encourage you to use the built-in dry-run feature before publishing real changes.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> The software is provided as-is without guarantees. Use the dry-run feature to inspect uploads before publishing.</p>
+<p><strong>In Plain English:</strong> The software is free and comes without guarantees beyond what the law requires. Use the dry-run feature to check uploads before publishing.</p>
 </blockquote>
 <hr>
 <h2 id="12-limitation-of-liability">12. Limitation of Liability</h2>
-<p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL MATEAI, ITS AUTHORS, CONTRIBUTORS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF REVENUE, LOSS OF VIEWS, CHANNEL SUSPENSION, OR DATA LOSS) ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE SOFTWARE.</p>
+<p>We are liable without limitation for damage we cause intentionally or through gross negligence, and for personal injury. Because the Software is provided free of charge, we are not liable for damage caused by slight negligence, such as loss of revenue, loss of views, channel suspension or data loss, except where mandatory law (such as product liability law) provides otherwise.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> We cannot be held legally or financially liable for channel issues, view drops, or software glitches.</p>
+<p><strong>In Plain English:</strong> We&#39;re responsible if we cause harm on purpose or through gross carelessness. For small mistakes in free software, we&#39;re not.</p>
 </blockquote>
 <hr>
 <h2 id="13-indemnification">13. Indemnification</h2>
-<p>You agree to defend, indemnify, and hold harmless MateAI, its maintainers, and contributors from and against any claims, damages, liabilities, losses, or legal costs arising from:</p>
-<ol>
-<li>Your violation of these Terms;</li>
-<li>Your violation of YouTube Terms of Service or Community Guidelines; or</li>
-<li>Any copyright, trademark, or privacy infringement resulting from media published via your use of the Software.</li>
-</ol>
+<p>If you culpably breach these Terms or YouTube&#39;s Terms of Service or Community Guidelines, or infringe other people&#39;s copyright, trademark or privacy rights through media you publish with the Software, you compensate us for the resulting damage in accordance with statutory law.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> If you use MateAI to infringe copyrights or break YouTube policies, you are legally responsible for any claims that arise.</p>
+<p><strong>In Plain English:</strong> If you use MateAI to infringe copyrights or break YouTube policies and that causes us damage, you&#39;re responsible for it.</p>
 </blockquote>
 <hr>
 <h2 id="14-termination-and-access-revocation">14. Termination and Access Revocation</h2>
@@ -163,10 +160,10 @@
 </blockquote>
 <hr>
 <h2 id="15-governing-law-and-dispute-resolution">15. Governing Law and Dispute Resolution</h2>
-<p>These Terms shall be governed by and construed in accordance with the laws of <strong>Austria</strong>, excluding its conflict of laws principles. Any legal action or proceeding arising under these Terms shall be instituted exclusively in the competent courts of <strong>Graz, Austria</strong>.</p>
-<p>Nothing in these Terms shall deprive consumers residing within the European Union of the mandatory consumer protection rights granted by their local law.</p>
+<p>These Terms are governed by the laws of <strong>Austria</strong>, excluding its conflict of laws rules. If you are a consumer, this choice of law does not deprive you of the protection of the mandatory provisions of the law of the country where you habitually reside.</p>
+<p>If you are a consumer, you may bring proceedings either in the courts of your place of residence or in the courts competent for our place of business; we may bring proceedings against you only in the courts of your place of residence. If you are not a consumer, the courts competent for our place of business have exclusive jurisdiction.</p>
 <blockquote>
-<p><strong>In Plain English:</strong> These terms are governed under Austrian / EU law.</p>
+<p><strong>In Plain English:</strong> Austrian law applies, but as a consumer you keep the protections of your home country&#39;s law and can take us to court where you live.</p>
 </blockquote>
 <hr>
 <h2 id="16-general-provisions-and-contact">16. General Provisions and Contact</h2>
@@ -174,9 +171,10 @@
 <p>These Terms and the Privacy Policy constitute the entire agreement between you and MateAI regarding the Software.</p>
 <p><strong>Contact Information:</strong>  </p>
 <ul>
+<li><strong>Operator:</strong> Máté Góg, sole trader, 8412 Allerheiligen bei Wildon, Austria (<a href="https://mateai-io.github.io/impressum/">Impressum</a>)  </li>
 <li><strong>Support Email:</strong> <a href="mailto:gog.mate@gmail.com">gog.mate@gmail.com</a>  </li>
 <li><strong>Website:</strong> <a href="https://mateai-io.github.io">https://mateai-io.github.io</a></li>
 </ul>
-</main><footer class="site-footer"><div class="wrap"><div><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><p class="fine">© 2026 MateAI. Not affiliated with YouTube, TikTok or Anthropic.</p></div><nav aria-label="Footer"><ul class="footer-links"><li><a href="/privacy">Privacy policy</a></li><li><a href="/terms/">Terms</a></li><li><a href="mailto:gog.mate@gmail.com">Contact</a></li></ul></nav></div></footer></div></div>
+</main><footer class="site-footer"><div class="wrap"><div><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><p class="fine">© 2026 MateAI. Not affiliated with YouTube, TikTok or Anthropic.</p></div><nav aria-label="Footer"><ul class="footer-links"><li><a href="/privacy">Privacy policy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="mailto:gog.mate@gmail.com">Contact</a></li></ul></nav></div></footer></div></div>
   </body>
 </html>
