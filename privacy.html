@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MateAI - Privacy Policy</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1f2937; background: #fff; }
+    h1, h2, h3 { color: #111827; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .highlight { background: #f3f4f6; padding: 16px; border-radius: 8px; border-left: 4px solid #2563eb; margin: 20px 0; }
+    code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+    ul { margin: 12px 0 20px 24px; }
+    li { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy for MateAI</h1>
+  <p><strong>Effective Date:</strong> November 5, 2026</p>
+  <p><strong>Last Updated:</strong> November 5, 2026</p>
+
+  <p>MateAI ("we", "our", or "the application") is a desktop companion application that allows users to connect their YouTube channel to local AI assistants (via Model Context Protocol / MCP) on their own computers.</p>
+
+  <h2>1. Local-First Architecture & Data Custody</h2>
+  <div class="highlight">
+    <strong>Zero-Server Architecture:</strong> MateAI does not operate central application servers or databases storing your credentials or private channel data. All API communications occur directly between your local computer and Google/YouTube APIs using official OAuth 2.0 protocols.
+  </div>
+
+  <h2>2. Google User Data Accessed and How It Is Used</h2>
+  <p>MateAI requests access to your YouTube and Google account data strictly to provide user-directed features:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/youtube.readonly</code>: Used solely to view your channel details, playlists, and video statistics on your local machine so you can query performance and information using your local AI assistant.</li>
+    <li><code>https://www.googleapis.com/auth/yt-analytics.readonly</code>: Used to retrieve video retention curves and viewer traffic reports locally to assist in analyzing content performance.</li>
+    <li><code>https://www.googleapis.com/auth/youtube.force-ssl</code>: Used exclusively to upload draft videos, update video metadata, set thumbnails, and manage video comments upon your explicit instruction.</li>
+  </ul>
+
+  <h2>3. Token & Data Storage</h2>
+  <ul>
+    <li><strong>Credentials & Tokens:</strong> OAuth refresh and access tokens are stored securely in your operating system's native credential store (macOS Keychain on macOS). Tokens are never transmitted to MateAI or any third party.</li>
+    <li><strong>Local Cache & Retention:</strong> Any temporary metadata or analytical reports generated locally are stored only on your local filesystem. In accordance with YouTube Developer Policies, cached API data is automatically invalidated or deleted within 30 calendar days.</li>
+  </ul>
+
+  <h2>4. Google API Limited Use Disclosure</h2>
+  <div class="highlight">
+    <p>MateAI's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  </div>
+  <p>Specifically:</p>
+  <ul>
+    <li>We do not share, sell, or rent Google user data to any third party.</li>
+    <li>We do not use Google user data for serving advertisements, including personalized, retargeted, or interest-based advertising.</li>
+    <li>We do not use Google user data to train generalized AI/ML models.</li>
+    <li>Human individuals do not read your private Google data unless required for security investigations or with your explicit consent for technical support.</li>
+  </ul>
+
+  <h2>5. Revocation and Access Removal</h2>
+  <p>You have full control over your credentials and permissions at all times:</p>
+  <ul>
+    <li><strong>In-App Disconnect:</strong> You can click the "Disconnect" button inside MateAI at any time. This revokes the active OAuth token with Google's servers and purges the token from your operating system keychain.</li>
+    <li><strong>Google Security Settings:</strong> You can revoke MateAI's access at any time directly through Google's permissions page at: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">https://myaccount.google.com/permissions</a>.</li>
+  </ul>
+
+  <h2>6. Contact Us</h2>
+  <p>If you have any questions about this Privacy Policy or MateAI's data practices, please contact us at:</p>
+  <p><strong>Support Email:</strong> <a href="mailto:gog.mate@gmail.com">gog.mate@gmail.com</a></p>
+  <p><strong>Project Repository:</strong> <a href="https://github.com/mategog/mateai-desktop" target="_blank" rel="noopener noreferrer">https://github.com/mategog/mateai-desktop</a></p>
+  <p><strong>Website:</strong> <a href="https://mateai-io.github.io">https://mateai-io.github.io</a></p>
+</body>
+</html>
