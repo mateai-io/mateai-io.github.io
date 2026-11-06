@@ -1,4 +1,4 @@
-import{h as a,c as i,j as n,r}from"./SiteHeader-CNOPVM1x.js";import{L as s}from"./LegalPage-Cfls9ZSw.js";const o=`# Impressum
+import{h as a,c as i,j as n,r}from"./SiteHeader-Bu59R_uE.js";import{L as s}from"./LegalPage-DgbCJf9_.js";const o=`# Impressum
 
 Information under § 5 of the Austrian E-Commerce Act (ECG) and disclosure under § 25 of the Austrian Media Act (MedienG).
 

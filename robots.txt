@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mateai-io.github.io/sitemap.xml
+Sitemap: https://mateaistudio.com/sitemap.xml

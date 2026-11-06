@@ -1,4 +1,4 @@
-import{h as t,c as a,j as n,r as i}from"./SiteHeader-CNOPVM1x.js";import{L as r}from"./LegalPage-Cfls9ZSw.js";const s=`# Terms of Service
+import{h as t,c as a,j as n,r as i}from"./SiteHeader-Bu59R_uE.js";import{L as r}from"./LegalPage-DgbCJf9_.js";const s=`# Terms of Service
 **MateAI**
 
 **Last Updated:** November 6, 2026  
@@ -31,9 +31,9 @@ import{h as t,c as a,j as n,r as i}from"./SiteHeader-CNOPVM1x.js";import{L as r}
 
 These Terms of Service ("Terms") constitute a legally binding agreement between you ("User", "you", or "your") and MateAI ("we", "us", or "our") governing your access to and use of the MateAI desktop companion application, the Model Context Protocol (MCP) server, and associated software tools (collectively, the "Software").
 
-MateAI is operated by Máté Góg, sole trader (Einzelunternehmen), 8412 Allerheiligen bei Wildon, Austria. Email: [gog.mate@gmail.com](mailto:gog.mate@gmail.com). Full legal notice: [Impressum](https://mateai-io.github.io/impressum/).
+MateAI is operated by Máté Góg, sole trader (Einzelunternehmen), 8412 Allerheiligen bei Wildon, Austria. Email: [gog.mate@gmail.com](mailto:gog.mate@gmail.com). Full legal notice: [Impressum](https://mateaistudio.com/impressum/).
 
-By downloading, installing, compiling, or executing the Software, you confirm that you have read, understood, and agreed to be bound by these Terms, as well as our [Privacy Policy](https://mateai-io.github.io/privacy).
+By downloading, installing, compiling, or executing the Software, you confirm that you have read, understood, and agreed to be bound by these Terms, as well as our [Privacy Policy](https://mateaistudio.com/privacy).
 
 **YouTube API Services Integration:**  
 MateAI connects to and uses the official YouTube Data API and YouTube Analytics API. By using MateAI to interact with YouTube, you acknowledge and agree that you are also bound by the [YouTube Terms of Service](https://www.youtube.com/t/terms) and the [Google Privacy Policy](https://policies.google.com/privacy).
@@ -119,7 +119,7 @@ Third-party costs associated with running AI models (such as an Anthropic Claude
 
 ## 9. Privacy and YouTube 30-Day Data Cache
 
-Our data handling practices are described in detail in the [MateAI Privacy Policy](https://mateai-io.github.io/privacy).
+Our data handling practices are described in detail in the [MateAI Privacy Policy](https://mateaistudio.com/privacy).
 
 **Compliance with YouTube Data Retention Rules:**  
 In strict compliance with YouTube Developer Policies, any cached YouTube API data, channel snapshots, or analytical metrics stored locally on your device are automatically refreshed or deleted within **30 calendar days**.
@@ -198,7 +198,7 @@ If any provision of these Terms is found to be invalid or unenforceable, that pr
 These Terms and the Privacy Policy constitute the entire agreement between you and MateAI regarding the Software.
 
 **Contact Information:**  
-- **Operator:** Máté Góg, sole trader, 8412 Allerheiligen bei Wildon, Austria ([Impressum](https://mateai-io.github.io/impressum/))  
+- **Operator:** Máté Góg, sole trader, 8412 Allerheiligen bei Wildon, Austria ([Impressum](https://mateaistudio.com/impressum/))  
 - **Support Email:** [gog.mate@gmail.com](mailto:gog.mate@gmail.com)  
-- **Website:** [https://mateai-io.github.io](https://mateai-io.github.io)
+- **Website:** [https://mateaistudio.com](https://mateaistudio.com)
 `,e=document.getElementById("root"),o=n.jsx(i.StrictMode,{children:n.jsx(r,{markdown:s})});e.hasChildNodes()?t(e,o):a(e).render(o);
