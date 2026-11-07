@@ -1,0 +1,8 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- OpenCode's official square logo: light variant, with the official dark variant's colors under dark mode. -->
+<style>.a{fill:#CFCECD}.b{fill:#211E1E}@media (prefers-color-scheme: dark){.a{fill:#4B4646}.b{fill:#F1ECEC}}</style>
+<g transform="translate(30, 0)">
+<path class="a" d="M180 240H60V120H180V240Z"/>
+<path class="b" d="M180 60H60V240H180V60ZM240 300H0V0H240V300Z"/>
+</g>
+</svg>
