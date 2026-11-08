@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mateaistudio.com/</loc></url>
-  <url><loc>https://mateaistudio.com/free-plugin/</loc></url>
-  <url><loc>https://mateaistudio.com/terms/</loc></url>
-  <url><loc>https://mateaistudio.com/privacy</loc></url>
-  <url><loc>https://mateaistudio.com/impressum/</loc></url>
+  <url><loc>https://mateaistudio.com/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/free-plugin/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/about/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/terms/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/privacy</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/impressum/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/youtube-analytics-in-claude/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/youtube-mcp-cursor/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/youtube-mcp-codex/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/youtube-in-antigravity/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://mateaistudio.com/free-plugin-vs-mateai-studio/</loc><lastmod>2026-11-08</lastmod></url>
 </urlset>

@@ -1,0 +1,25 @@
+# MateAI Studio
+
+> MateAI Studio is a Mac app (Apple silicon) by Máté Góg that connects your YouTube channel to Claude Desktop, Codex, Cursor, Google Antigravity and OpenCode. You ask about your stats, prepare uploads as private drafts and catch up on comments, in plain words. It is in development and free during early access.
+
+- Nothing is public unless you ask: uploads are private drafts or scheduled by default.
+- YouTube is supported today. TikTok drafts are waiting on TikTok's app review.
+- Windows and Intel Macs are not supported by the app yet. The free plugin below works on Mac and Windows.
+
+## Pages
+
+- [MateAI Studio](https://mateaistudio.com/): what the app does, how it works, privacy and FAQ
+- [Free MateAI plugin setup guide](https://mateaistudio.com/free-plugin/): connect YouTube to Claude or Google Antigravity today, step by step, no coding needed
+- [How to get your YouTube analytics in Claude](https://mateaistudio.com/youtube-analytics-in-claude/): setup, example questions, what it can and can't see
+- [YouTube MCP server for Cursor](https://mateaistudio.com/youtube-mcp-cursor/): add the free plugin to Cursor by hand (not yet tested), and the one-click alternative
+- [YouTube MCP server for Codex](https://mateaistudio.com/youtube-mcp-codex/): connect YouTube to Codex with the free plugin, the config.toml entry, what isn't tested yet
+- [How to connect YouTube to Google Antigravity](https://mateaistudio.com/youtube-in-antigravity/): adding the free plugin, signing in, example prompts, limits
+- [Free MateAI plugin vs MateAI Studio](https://mateaistudio.com/free-plugin-vs-mateai-studio/): which one to use, compared on computers, AI apps, Google setup, limits, price and data
+- [About](https://mateaistudio.com/about/): who builds MateAI and how
+- [Privacy policy](https://mateaistudio.com/privacy)
+- [Terms of service](https://mateaistudio.com/terms/)
+
+## Elsewhere
+
+- [Free plugin source code (GitHub)](https://github.com/mategog/mateai-youtube-mcp)
+- [MateAI on YouTube](https://www.youtube.com/@mateai-c6m)

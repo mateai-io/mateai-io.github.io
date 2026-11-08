@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Connect your YouTube channel to Google Antigravity with a free MCP plugin: how to add it, how sign-in works, what to ask and the limits." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>How to connect YouTube to Google Antigravity</title>
+    <link rel="canonical" href="https://mateaistudio.com/youtube-in-antigravity/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="MateAI Studio" />
+    <meta property="og:title" content="How to connect YouTube to Google Antigravity" />
+    <meta property="og:url" content="https://mateaistudio.com/youtube-in-antigravity/" />
+    <meta property="og:description" content="Connect your YouTube channel to Google Antigravity with a free MCP plugin: how to add it, how sign-in works, what to ask and the limits." />
+    <meta property="og:image" content="https://mateaistudio.com/og.png" />
+    <meta property="article:published_time" content="2026-11-08" />
+    <meta property="article:modified_time" content="2026-11-08" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to connect YouTube to Google Antigravity","description":"Connect your YouTube channel to Google Antigravity with a free MCP plugin: how to add it, how sign-in works, what to ask and the limits.","author":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"},"datePublished":"2026-11-08","dateModified":"2026-11-08","image":"https://mateaistudio.com/og.png","mainEntityOfPage":"https://mateaistudio.com/youtube-in-antigravity/","publisher":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"}}</script>
+    <script type="module" crossorigin src="/assets/SiteHeader-DV_qQ4h1.js"></script>
+    <script type="module" crossorigin src="/assets/LegalPage-D9Fc7Hln.js"></script>
+    <script type="module" crossorigin src="/assets/article-DgGzqgAi.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/SiteHeader-BkEQRB8Q.css">
+    <link rel="stylesheet" crossorigin href="/assets/LegalPage-Cgfm6Iel.css">
+  </head>
+  <body>
+    <div id="root"><div class="site"><a class="skip btn btn-secondary" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><nav aria-label="Main" style="display:contents"><ul class="site-nav"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#privacy">Privacy</a></li><li><a href="/free-plugin/">Free plugin</a></li><li><a href="/#faq">FAQ</a></li></ul></nav></div></header><main id="main" class="wrap legal"><h1 id="how-to-connect-youtube-to-google-antigravity">How to connect YouTube to Google Antigravity</h1>
+<p class="byline">By Máté Góg · Last updated <time datetime="2026-11-08">8 November 2026</time></p>
+
+<p><strong>Short answer:</strong> Google Antigravity can&#39;t reach your YouTube channel on its own. You add a free MCP server, the MateAI plugin, by cloning it into Antigravity&#39;s plugin folder, then sign in once with <code>python3 yt_studio.py setup</code>. After about 30 minutes of one-time setup you ask about your stats and prepare uploads in plain words.</p>
+<p>I built the plugin for my own channel. This page covers what is different in Antigravity. The click-by-click steps are in the <a href="/free-plugin/">free plugin setup guide</a>.</p>
+<h2 id="what-do-you-need">What do you need?</h2>
+<ul>
+<li><strong>Google Antigravity</strong>, installed and signed in.</li>
+<li><strong>A Mac or a Windows PC</strong> with Python 3.10 or newer. Antigravity starts the plugin with the <code>python3</code> command, so that command has to work.</li>
+<li><strong>Git</strong>, to download the plugin. On a Mac, the first <code>git</code> command offers to install it for you.</li>
+<li><strong>The Google account that owns your channel.</strong></li>
+<li><strong>About 30 minutes</strong>, once. Around 15 of them go to creating your own Google project.</li>
+</ul>
+<p>The plugin costs nothing. It uses Google&#39;s official YouTube Data API and YouTube Analytics API, with your own free daily quota of 10,000 units.</p>
+<h2 id="how-do-you-add-the-plugin-to-antigravity">How do you add the plugin to Antigravity?</h2>
+<p>There is no install command like in Claude Code. Antigravity loads plugins from a folder in your home directory, so you download the plugin straight into it. On a Mac that&#39;s one line in Terminal:</p>
+<p><code>git clone https://github.com/mategog/mateai-youtube-mcp.git ~/.gemini/config/plugins/mateai-youtube</code></p>
+<p>On Windows you run the same command in PowerShell, into the <code>.gemini\config\plugins</code> folder in your user profile. The <a href="/free-plugin/">setup guide</a> has both versions ready to copy.</p>
+<p>Antigravity only reads plugins when it starts. After cloning, and again after signing in, quit Antigravity completely and open it again. If it still doesn&#39;t know about your channel, that restart is almost always the fix.</p>
+<h2 id="how-does-signing-in-differ-from-claude-code">How does signing in differ from Claude Code?</h2>
+<p>In Claude Code you type <code>/yt-setup</code> in the chat. That command doesn&#39;t exist in Antigravity. Instead you run the plugin&#39;s setup wizard yourself, from its folder:</p>
+<p><code>cd ~/.gemini/config/plugins/mateai-youtube &amp;&amp; python3 yt_studio.py setup</code></p>
+<p>The wizard:</p>
+<ol>
+<li>Installs Google&#39;s sign-in libraries into the plugin folder.</li>
+<li>Opens Google&#39;s pages to turn on the two YouTube APIs. If it finds no client file yet, it also opens the pages to add yourself as a test user and create a &quot;Desktop app&quot; client file.</li>
+<li>Watches your Downloads folder and picks up the client file as soon as you download it.</li>
+<li>Opens Google&#39;s sign-in in your browser. You pick your channel&#39;s account and tick every box.</li>
+<li>Prints <strong>Setup complete!</strong> and opens a page with your channel stats.</li>
+</ol>
+<p>Google shows &quot;Google hasn&#39;t verified this app&quot; during sign-in. That&#39;s expected: the app is the Google project you just made yourself. Your password is typed on Google&#39;s page and never reaches the plugin.</p>
+<p>One more difference: when you install it this way, the plugin keeps your login and its cache inside that same plugin folder, not in Claude&#39;s data folder.</p>
+<h2 id="what-can-you-ask-antigravity-about-your-channel">What can you ask Antigravity about your channel?</h2>
+<p>Start a new chat after the restart and ask normally. For example:</p>
+<ul>
+<li>&quot;Give me a snapshot of my channel.&quot;</li>
+<li>&quot;How did my last five videos do?&quot;</li>
+<li>&quot;Which of my Shorts lost viewers in the first two seconds?&quot;</li>
+<li>&quot;Which traffic sources brought views to my latest video?&quot;</li>
+<li>&quot;Do a dry run of uploading short.mp4 as a private video with a title and hashtags.&quot;</li>
+</ul>
+<p>Try a <strong>dry run</strong> before any real upload. It shows exactly what would be sent, with the schedule in your local time, and sends nothing to YouTube. By default, real uploads go up as private drafts or scheduled for the time you set. The plugin can also change video details and post or reply to comments when you ask. Deleting a video always asks you first and needs its exact title.</p>
+<p>For a longer list of questions and exactly which numbers the plugin can read, see <a href="/youtube-analytics-in-claude/">how to get your YouTube analytics in Claude</a>. The data is the same in Antigravity.</p>
+<h2 id="what-are-the-limits">What are the limits?</h2>
+<ul>
+<li><strong>You sign in again about once a week.</strong> Google expires sign-ins after 7 days while your Google project is in &quot;Testing&quot; status, which is how it starts. Run <code>python3 yt_studio.py setup</code> from the plugin folder again. It reuses your client file: close the Google Cloud tabs it opens and just sign in.</li>
+<li><strong>Some extras are Claude Code only.</strong> The <code>/yt-setup</code> command and the <code>/yt-dashboard</code> card above the prompt are Claude Code features. In Antigravity you get the tools, plus the stats page the wizard opens.</li>
+<li><strong>The quota is finite.</strong> Normal questions use little of it. If you hit the limit, the plugin stops and tells you; it resets at midnight Pacific time.</li>
+<li><strong>Your channel only.</strong> It doesn&#39;t see revenue, demographics, impressions or other people&#39;s private stats.</li>
+<li><strong>The AI can misread numbers.</strong> The numbers come from YouTube, the conclusions don&#39;t. Check anything you&#39;d act on in YouTube Studio.</li>
+</ul>
+<h2 id="is-it-private">Is it private?</h2>
+<p>The plugin runs on your computer and talks only to Google&#39;s YouTube APIs and to Antigravity. I, the author, receive no data. Whatever the plugin reads becomes part of your Antigravity chat, which falls under Google&#39;s terms for Antigravity.</p>
+<p>To remove it, delete the <code>mateai-youtube</code> plugin folder, which also deletes your saved login. Then remove its access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<h2 id="is-there-an-easier-way">Is there an easier way?</h2>
+<p>The Google project is the slow part, so I&#39;m building <strong>MateAI Studio</strong>: a Mac app that connects your channel with one Google sign-in, no project of your own. It works with Google Antigravity, Claude Desktop, Codex, Cursor and OpenCode. It&#39;s in development and free during early access, with testers invited in small batches.</p>
+<ul>
+<li>Want it today? Follow the <a href="/free-plugin/">free plugin setup guide</a>.</li>
+<li>Rather wait for the one-click version? <a href="/#early-access">Join the early-access list</a>.</li>
+</ul>
+</main><footer class="site-footer"><div class="wrap"><div><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><p class="fine">© 2026 MateAI. Not affiliated with YouTube, TikTok or Anthropic.</p></div><nav aria-label="Footer"><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/free-plugin/#support">Support</a></li><li><a href="mailto:gog.mate@gmail.com">Contact</a></li></ul></nav></div></footer></div></div>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Connect your YouTube channel to Claude with a free plugin, ask about your stats in plain words, and see exactly what data Claude can and can't access." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>How to get your YouTube analytics in Claude</title>
+    <link rel="canonical" href="https://mateaistudio.com/youtube-analytics-in-claude/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="MateAI Studio" />
+    <meta property="og:title" content="How to get your YouTube analytics in Claude" />
+    <meta property="og:url" content="https://mateaistudio.com/youtube-analytics-in-claude/" />
+    <meta property="og:description" content="Connect your YouTube channel to Claude with a free plugin, ask about your stats in plain words, and see exactly what data Claude can and can't access." />
+    <meta property="og:image" content="https://mateaistudio.com/og.png" />
+    <meta property="article:published_time" content="2026-11-08" />
+    <meta property="article:modified_time" content="2026-11-08" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"How to get your YouTube analytics in Claude","description":"Connect your YouTube channel to Claude with a free plugin, ask about your stats in plain words, and see exactly what data Claude can and can't access.","author":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"},"datePublished":"2026-11-08","dateModified":"2026-11-08","image":"https://mateaistudio.com/og.png","mainEntityOfPage":"https://mateaistudio.com/youtube-analytics-in-claude/","publisher":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"}}</script>
+    <script type="module" crossorigin src="/assets/SiteHeader-DV_qQ4h1.js"></script>
+    <script type="module" crossorigin src="/assets/LegalPage-D9Fc7Hln.js"></script>
+    <script type="module" crossorigin src="/assets/article-DgGzqgAi.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/SiteHeader-BkEQRB8Q.css">
+    <link rel="stylesheet" crossorigin href="/assets/LegalPage-Cgfm6Iel.css">
+  </head>
+  <body>
+    <div id="root"><div class="site"><a class="skip btn btn-secondary" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><nav aria-label="Main" style="display:contents"><ul class="site-nav"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#privacy">Privacy</a></li><li><a href="/free-plugin/">Free plugin</a></li><li><a href="/#faq">FAQ</a></li></ul></nav></div></header><main id="main" class="wrap legal"><h1 id="how-to-get-your-youtube-analytics-in-claude">How to get your YouTube analytics in Claude</h1>
+<p class="byline">By Máté Góg · Last updated <time datetime="2026-11-08">8 November 2026</time></p>
+
+<p><strong>Short answer:</strong> Claude can&#39;t see your YouTube Studio on its own. You connect your channel through Google&#39;s official YouTube APIs with a free plugin, the MateAI plugin. After a one-time setup of about 30 minutes, you ask in plain words, like &quot;How did my last five videos do?&quot;, and Claude answers from your real numbers.</p>
+<p>This page explains how that works today, what Claude can and can&#39;t see, and where the limits are. I built the plugin for my own channel, so I&#39;ll be specific about what it actually does.</p>
+<h2 id="what-do-you-need">What do you need?</h2>
+<ul>
+<li><strong>A paid Claude plan</strong>, because the plugin runs in Claude Code and the free plan doesn&#39;t include it. Google Antigravity works too, if you use that instead.</li>
+<li><strong>A Mac or a Windows PC</strong> with Python 3.10 or newer. The setup guide shows how to install it.</li>
+<li><strong>The Google account that owns your channel.</strong></li>
+<li><strong>About 30 minutes</strong>, once.</li>
+</ul>
+<p>The plugin itself costs nothing. It uses the YouTube Data API and YouTube Analytics API, which Google gives to every developer for free with a daily quota of 10,000 units. You use your own quota, not a shared one.</p>
+<h2 id="how-do-you-connect-youtube-to-claude-step-by-step">How do you connect YouTube to Claude, step by step?</h2>
+<p>The full walkthrough, with every click on the Google pages and separate steps for Mac and Windows, is on the <a href="/free-plugin/">free plugin setup guide</a>. In short:</p>
+<ol>
+<li><strong>Install Python</strong> if your computer doesn&#39;t have it yet.</li>
+<li><strong>Install the plugin.</strong> In Claude Code that&#39;s two commands: <code>claude plugin marketplace add mategog/mateai-youtube-mcp</code>, then <code>claude plugin install yt-studio@mateai-youtube-mcp</code>. In Antigravity you paste one line that downloads it into Antigravity&#39;s plugin folder.</li>
+<li><strong>Create your own Google client file.</strong> Google requires this from everyone who uses its YouTube APIs. You add your email as a test user and download a &quot;Desktop app&quot; client file. This is the slowest step, about 15 minutes.</li>
+<li><strong>Sign in.</strong> Type <code>/yt-setup</code> in Claude Code (in Antigravity, run the sign-in step from the <a href="/free-plugin/">setup guide</a> instead). Your browser opens Google&#39;s sign-in page, you pick your channel&#39;s account and tick every box. Your password is typed on Google&#39;s page and never reaches the plugin.</li>
+<li><strong>Ask a question.</strong> Start with something simple, like &quot;Give me a snapshot of my channel.&quot;</li>
+</ol>
+<h2 id="what-can-you-ask-claude-about-your-channel">What can you ask Claude about your channel?</h2>
+<p>Once connected, you don&#39;t need special commands. Some questions that work well:</p>
+<ul>
+<li>&quot;How did my last five videos do?&quot;</li>
+<li>&quot;Which of my Shorts lost viewers in the first two seconds?&quot;</li>
+<li>&quot;Compare average percentage viewed across my Shorts from the last three months.&quot;</li>
+<li>&quot;Where does the audience drop off in this video, and what was I saying at that moment?&quot; (This one needs a transcript file with word timings.)</li>
+<li>&quot;Which traffic sources brought views to my latest video?&quot;</li>
+<li>&quot;Which video gained me the most subscribers?&quot;</li>
+</ul>
+<p>Claude reads the numbers, then does what it&#39;s good at: comparing, spotting patterns and explaining them. The numbers come from YouTube. The explanation comes from Claude, so treat it as a second opinion, not as a fact.</p>
+<h2 id="what-data-can-claude-see-and-what-can39t-it-see">What data can Claude see, and what can&#39;t it see?</h2>
+<p><strong>What it can see</strong>, for your own channel:</p>
+<ul>
+<li>Your channel overview and your 50 most recent uploads, split into long videos and Shorts.</li>
+<li>Per video, for the last 90 days: views, engaged views, watch time, average view duration, average percentage viewed, likes, comments and subscribers gained.</li>
+<li>For Shorts, how many people viewed versus swiped away.</li>
+<li>For one video at a time, for the last 365 days: the audience retention curve (100 points), how its retention compares with similar videos on YouTube, and its traffic sources.</li>
+<li>Your video details (title, description, tags, privacy and schedule), including private and scheduled videos, and the comments on your videos.</li>
+</ul>
+<p><strong>What it can&#39;t see</strong>, because the plugin doesn&#39;t ask Google for it:</p>
+<ul>
+<li>Revenue and earnings.</li>
+<li>Demographics: age, gender, countries.</li>
+<li>Impressions and thumbnail click-through rate.</li>
+<li>Other people&#39;s channels in Studio detail. A public-numbers mode exists, but it&#39;s off by default and only reads what anyone can see on youtube.com.</li>
+</ul>
+<h2 id="what-are-the-limits">What are the limits?</h2>
+<ul>
+<li><strong>Setup takes effort.</strong> Creating the Google client file is the part most people find fiddly. The guide walks through every click.</li>
+<li><strong>You sign in again about once a week.</strong> Google expires sign-ins after 7 days for apps in &quot;Testing&quot; status, which is how your own Google project starts. Running <code>/yt-setup</code> again fixes it.</li>
+<li><strong>The daily quota is finite.</strong> Normal questions use little of it. If you hit the limit, the plugin stops and tells you; the quota resets at midnight Pacific time.</li>
+<li><strong>Claude can misread numbers.</strong> It works from real data, but its conclusions can still be wrong. Check anything you&#39;d act on in YouTube Studio.</li>
+<li><strong>It&#39;s your channel only.</strong> It doesn&#39;t do competitor research from private data, because that data isn&#39;t available to anyone but the channel owner.</li>
+</ul>
+<h2 id="is-it-private">Is it private?</h2>
+<p>The plugin runs on your own computer. Your Google login is saved in a local file in your own user folder, and I, the author, receive no data. The plugin talks only to Google&#39;s YouTube APIs, and to your AI app: whatever Claude reads becomes part of your Claude conversation, which falls under Anthropic&#39;s privacy terms (or Google&#39;s, if you use Antigravity).</p>
+<p>You can remove access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> and by deleting the plugin&#39;s data folder.</p>
+<p>The plugin can also upload videos (as private drafts or scheduled), change details and post comments, but only when you ask. Deleting a video always asks you first, and you can make it ask before other actions too.</p>
+<h2 id="is-there-an-easier-way">Is there an easier way?</h2>
+<p>The Google project step is what I wanted to remove, so I&#39;m building <strong>MateAI Studio</strong>: a Mac app that connects your YouTube channel with one click, without your own Google Cloud project. It works with Claude Desktop, Codex, Cursor, Google Antigravity and OpenCode. It&#39;s still in development and free during early access. Testers are invited in small batches.</p>
+<ul>
+<li>Want it today? Use the <a href="/free-plugin/">free plugin</a>.</li>
+<li>Rather wait for the one-click version? <a href="/#early-access">Join the early-access list</a>.</li>
+</ul>
+</main><footer class="site-footer"><div class="wrap"><div><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><p class="fine">© 2026 MateAI. Not affiliated with YouTube, TikTok or Anthropic.</p></div><nav aria-label="Footer"><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/privacy">Privacy policy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/free-plugin/#support">Support</a></li><li><a href="mailto:gog.mate@gmail.com">Contact</a></li></ul></nav></div></footer></div></div>
+  </body>
+</html>
