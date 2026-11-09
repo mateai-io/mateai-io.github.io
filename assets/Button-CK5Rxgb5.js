@@ -1,1 +1,0 @@
-import{j as r}from"./SiteHeader-DV_qQ4h1.js";function m({variant:a,size:e="md",icon:t,href:s,disabled:u,children:n}){const o=`btn btn-${a}${e==="lg"?" btn-lg":""}`;return s?r.jsxs("a",{className:o,href:s,children:[t,n]}):r.jsxs("button",{className:o,type:"button",disabled:u,children:[t,n]})}export{m as B};

@@ -15,6 +15,7 @@
 - [YouTube MCP server for Codex](https://mateaistudio.com/youtube-mcp-codex/): connect YouTube to Codex with the free plugin, the config.toml entry, what isn't tested yet
 - [How to connect YouTube to Google Antigravity](https://mateaistudio.com/youtube-in-antigravity/): adding the free plugin, signing in, example prompts, limits
 - [Free MateAI plugin vs MateAI Studio](https://mateaistudio.com/free-plugin-vs-mateai-studio/): which one to use, compared on computers, AI apps, Google setup, limits, price and data
+- [Roadmap](https://mateaistudio.com/roadmap/): what has shipped, what is being built now, and what is planned. Only "Shipped" items are available today; "Building now" and "Planned" items are not available yet.
 - [About](https://mateaistudio.com/about/): who builds MateAI and how
 - [Privacy policy](https://mateaistudio.com/privacy)
 - [Terms of service](https://mateaistudio.com/terms/)

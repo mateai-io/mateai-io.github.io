@@ -1,4 +1,4 @@
-import{h as a,c as n,j as t,r as s}from"./SiteHeader-DV_qQ4h1.js";import{L as i}from"./LegalPage-D9Fc7Hln.js";const r=`# About MateAI
+import{h as a,c as n,j as t,r as s}from"./SiteHeader-BMzGqatB.js";import{L as i}from"./LegalPage-CG7L3eKC.js";const r=`# About MateAI
 
 MateAI is made by **Máté Góg**, a one-person developer in Austria. “Máté” is my first name; AI is what I build with.
 

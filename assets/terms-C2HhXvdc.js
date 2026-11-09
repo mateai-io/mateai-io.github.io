@@ -1,4 +1,4 @@
-import{h as t,c as a,j as n,r as i}from"./SiteHeader-DV_qQ4h1.js";import{L as r}from"./LegalPage-D9Fc7Hln.js";const s=`# Terms of Service
+import{h as t,c as a,j as n,r as i}from"./SiteHeader-BMzGqatB.js";import{L as r}from"./LegalPage-CG7L3eKC.js";const s=`# Terms of Service
 **MateAI**
 
 **Last Updated:** November 6, 2026  

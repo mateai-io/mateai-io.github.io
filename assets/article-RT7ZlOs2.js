@@ -1,4 +1,4 @@
-import{h as s,c as i,j as t,r}from"./SiteHeader-DV_qQ4h1.js";import{L as u}from"./LegalPage-D9Fc7Hln.js";const l=`# MateAI plugin vs MateAI Studio: which should you use?
+import{h as s,c as i,j as t,r}from"./SiteHeader-BMzGqatB.js";import{L as u}from"./LegalPage-CG7L3eKC.js";const l=`# MateAI plugin vs MateAI Studio: which should you use?
 
 <p class="byline">By Máté Góg · Last updated <time datetime="2026-11-08">8 November 2026</time></p>
 
