@@ -27,7 +27,7 @@
   </header>
   <h1>Privacy Policy for MateAI</h1>
   <p><strong>Effective Date:</strong> November 5, 2026</p>
-  <p><strong>Last Updated:</strong> November 9, 2026</p>
+  <p><strong>Last Updated:</strong> November 10, 2026</p>
 
   <p>MateAI ("we", "our", or "the application") is a desktop companion application that allows users to connect their YouTube channel to local AI assistants (via Model Context Protocol / MCP) on their own computers.</p>
 
@@ -50,7 +50,18 @@
     <li><strong>Local Cache & Retention:</strong> Any temporary metadata or analytical reports generated locally are stored only on your local filesystem. In accordance with YouTube Developer Policies, cached API data is automatically invalidated or deleted within 30 calendar days.</li>
   </ul>
 
-  <h2>4. Google API Limited Use Disclosure</h2>
+  <h2>4. How We Protect Your Data</h2>
+  <p>Your Google and YouTube data, including your OAuth tokens, is sensitive. MateAI protects it with these measures:</p>
+  <ul>
+    <li><strong>Encryption in transit:</strong> every request between MateAI and Google (sign-in, token refresh and all YouTube API calls) goes over HTTPS with TLS encryption, directly to Google's servers. The sign-in uses Google's official OAuth 2.0 flow in your own browser; MateAI never sees or stores your Google password.</li>
+    <li><strong>Encryption and access control at rest:</strong> in the MateAI desktop app, your OAuth tokens are kept in the macOS Keychain, which stores them encrypted and only lets MateAI read them. If you run the MCP server on its own, the token file is created with owner-only permissions (file mode 0600 on macOS and Linux), so other user accounts on the computer cannot read it; on Windows it sits inside your private user profile.</li>
+    <li><strong>No central storage:</strong> Google user data is never sent to MateAI servers, because MateAI has none for this data. There is no central database of tokens or channel data that could be breached; the data stays on your own device.</li>
+    <li><strong>Data minimization and retention:</strong> MateAI requests only the scopes listed in section 2, fetches data only when you ask for it, and deletes cached API data within 30 days. Upload, edit and comment actions run only on your explicit instruction.</li>
+    <li><strong>Revocation and deletion:</strong> disconnecting in the app revokes the token with Google and deletes it from your device (see section 6). Uninstalling MateAI and deleting its data folder removes everything it stored locally.</li>
+    <li><strong>Security fixes:</strong> if you find a security problem, email us at the address in section 9. We investigate reports promptly and ship fixes as app updates.</li>
+  </ul>
+
+  <h2>5. Google API Limited Use Disclosure</h2>
   <div class="highlight">
     <p>MateAI's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
   </div>
@@ -62,14 +73,14 @@
     <li>Human individuals do not read your private Google data unless required for security investigations or with your explicit consent for technical support.</li>
   </ul>
 
-  <h2>5. Revocation and Access Removal</h2>
+  <h2>6. Revocation and Access Removal</h2>
   <p>You have full control over your credentials and permissions at all times:</p>
   <ul>
     <li><strong>In-App Disconnect:</strong> You can click the "Disconnect" button inside MateAI at any time. This revokes the active OAuth token with Google's servers and purges the token from your operating system keychain.</li>
     <li><strong>Google Security Settings:</strong> You can revoke MateAI's access at any time directly through Google's permissions page at: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">https://myaccount.google.com/permissions</a>.</li>
   </ul>
 
-  <h2>6. Early-Access Mailing List (Website)</h2>
+  <h2>7. Early-Access Mailing List (Website)</h2>
   <p>This section covers only the early-access signup form on <a href="https://mateaistudio.com">mateaistudio.com</a>. It is separate from the MateAI app: no Google or YouTube data is involved, and the app does not send anything to this list.</p>
   <ul>
     <li><strong>What we collect:</strong> the email address you enter, plus the details our email provider records to show that you agreed, such as when you signed up and when you confirmed.</li>
@@ -80,7 +91,7 @@
     <li><strong>Your choices:</strong> every email has an unsubscribe link. You can also email us at the address below to see, correct or delete your data, or to withdraw your consent. You have the right to complain to a data protection authority; in Austria, that is the Datenschutzbehörde.</li>
   </ul>
 
-  <h2>7. Roadmap Stars (Website)</h2>
+  <h2>8. Roadmap Stars (Website)</h2>
   <p>This section covers only the star buttons on the <a href="https://mateaistudio.com/roadmap/">roadmap page</a>. No account or login is needed, and no Google or YouTube data is involved.</p>
   <ul>
     <li><strong>What your browser keeps:</strong> a random ID and the list of cards you starred, saved in your browser's local storage so the page remembers your stars and you can't star the same card twice. It contains nothing about who you are, and it is not used for tracking or advertising. You can delete it at any time by clearing this site's data in your browser.</li>
@@ -89,7 +100,7 @@
     <li><strong>Who processes it:</strong> the star service runs on Microsoft Azure in the EU (North Europe region), operated by Microsoft Ireland Operations Limited on our behalf.</li>
   </ul>
 
-  <h2>8. Contact Us</h2>
+  <h2>9. Contact Us</h2>
   <p>MateAI is operated by Máté Góg, sole trader (Einzelunternehmen), 8412 Allerheiligen bei Wildon, Austria, who is responsible for the processing described in this policy. Full legal notice: <a href="https://mateaistudio.com/impressum/">Impressum</a>.</p>
   <p>If you have any questions about this Privacy Policy or MateAI's data practices, please contact us at:</p>
   <p><strong>Support Email:</strong> <a href="mailto:gog.mate@gmail.com">gog.mate@gmail.com</a></p>
