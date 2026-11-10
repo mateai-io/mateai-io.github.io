@@ -29,7 +29,7 @@
   <p><strong>Effective Date:</strong> November 5, 2026</p>
   <p><strong>Last Updated:</strong> November 10, 2026</p>
 
-  <p>MateAI ("we", "our", or "the application") is a desktop companion application that allows users to connect their YouTube channel to local AI assistants (via Model Context Protocol / MCP) on their own computers.</p>
+  <p>MateAI ("we", "our", or "the application") is a desktop companion application that allows users to connect their YouTube channel to the AI assistant they run on their own computer, such as Claude (via Model Context Protocol / MCP).</p>
 
   <h2>1. Local-First Architecture & Data Custody</h2>
   <div class="highlight">
@@ -55,8 +55,10 @@
   <ul>
     <li><strong>Encryption in transit:</strong> every request between MateAI and Google (sign-in, token refresh and all YouTube API calls) goes over HTTPS with TLS encryption, directly to Google's servers. The sign-in uses Google's official OAuth 2.0 flow in your own browser; MateAI never sees or stores your Google password.</li>
     <li><strong>Encryption and access control at rest:</strong> in the MateAI desktop app, your OAuth tokens are kept in the macOS Keychain, which stores them encrypted and only lets MateAI read them. If you run the MCP server on its own, the token file is created with owner-only permissions (file mode 0600 on macOS and Linux), so other user accounts on the computer cannot read it; on Windows it sits inside your private user profile.</li>
-    <li><strong>No central storage:</strong> Google user data is never sent to MateAI servers, because MateAI has none for this data. There is no central database of tokens or channel data that could be breached; the data stays on your own device.</li>
-    <li><strong>Data minimization and retention:</strong> MateAI requests only the scopes listed in section 2, fetches data only when you ask for it, and deletes cached API data within 30 days. Upload, edit and comment actions run only on your explicit instruction.</li>
+    <li><strong>No central storage:</strong> Google user data is never sent to MateAI servers, because MateAI has none for this data. There is no central database of tokens or channel data that could be breached; MateAI keeps the data only on your own device.</li>
+    <li><strong>Your AI assistant:</strong> when you ask your AI assistant about your channel, MateAI reads the data it needs on your computer and hands it to that assistant. The assistant then sends it to the AI provider you chose (for example Anthropic, for Claude) to produce an answer. This happens under your own account with that provider and its privacy terms; MateAI does not run, see or store that exchange, and does not send Google user data to any AI provider on its own.</li>
+    <li><strong>Protection against unsafe instructions:</strong> text from YouTube, such as comments, can contain instructions meant to mislead an AI assistant. Deleting a video always requires your confirmation in a dialog that the AI assistant cannot answer for you, plus the video's exact title. You can choose to require the same confirmation for uploads, edits, comments and replies in MateAI's safety settings. Posted comments and replies have fixed rate limits to prevent spam.</li>
+    <li><strong>Data minimization and retention:</strong> MateAI requests only the scopes listed in section 2, fetches data only when you ask for it, and deletes cached API data within 30 days. Upload, edit and comment actions run only when you ask your AI assistant for them.</li>
     <li><strong>Revocation and deletion:</strong> disconnecting in the app revokes the token with Google and deletes it from your device (see section 6). Uninstalling MateAI and deleting its data folder removes everything it stored locally.</li>
     <li><strong>Security fixes:</strong> if you find a security problem, email us at the address in section 9. We investigate reports promptly and ship fixes as app updates.</li>
   </ul>
