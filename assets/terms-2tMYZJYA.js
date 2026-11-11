@@ -91,11 +91,11 @@ MateAI claims zero ownership, license, or rights in your content. You represent 
 
 The MateAI desktop app is owned by Máté Góg. We grant you a free, personal, non-exclusive and non-transferable license to install and use it on computers you own or control, to manage your own channels. You may not sell, rent or redistribute the app or remove its notices. This license ends if you materially breach these Terms.
 
-The MateAI MCP server is open source under the Apache License 2.0, published at [github.com/mategog/mateai-youtube-mcp](https://github.com/mategog/mateai-youtube-mcp). That license, not this section, governs the MCP server's source code.
+The MateAI MCP server's source code is public under the Apache License 2.0 with the Commons Clause, published at [github.com/mategog/mateai-youtube-mcp](https://github.com/mategog/mateai-youtube-mcp). That license, not this section, governs the MCP server's source code.
 
 All trademarks, logos, and brand elements of MateAI belong to their respective owners. YouTube is a registered trademark of Google LLC. Claude is a registered trademark of Anthropic PBC. MateAI is an independent project and is not affiliated with, sponsored by, or endorsed by Google LLC or Anthropic PBC.
 
-> **In Plain English:** You can use the MateAI app for free on your own computer for your own channels, but please don't resell or redistribute it. The MCP server is open source (Apache 2.0). Google, YouTube and Claude are trademarks of their companies, and MateAI isn't affiliated with them.
+> **In Plain English:** You can use the MateAI app for free on your own computer for your own channels, but please don't resell or redistribute it. The MCP server's code is public and free to use, but its license (Apache 2.0 with the Commons Clause) doesn't let you sell it. Google, YouTube and Claude are trademarks of their companies, and MateAI isn't affiliated with them.
 
 ---
 
