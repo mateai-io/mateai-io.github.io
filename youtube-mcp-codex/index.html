@@ -17,26 +17,26 @@
     <meta property="article:published_time" content="2026-11-08" />
     <meta property="article:modified_time" content="2026-11-08" />
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"YouTube MCP server for Codex: how to connect your channel","description":"Connect YouTube to Codex with the free MateAI MCP server: the config.toml entry, the Google setup it still needs, and what isn't tested yet.","author":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"},"datePublished":"2026-11-08","dateModified":"2026-11-08","image":"https://mateaistudio.com/og.png","mainEntityOfPage":"https://mateaistudio.com/youtube-mcp-codex/","publisher":{"@id":"https://mateaistudio.com/#person","@type":"Person","name":"Máté Góg"}}</script>
-    <script type="module" crossorigin src="/assets/SiteHeader-BMzGqatB.js"></script>
-    <script type="module" crossorigin src="/assets/LegalPage-CG7L3eKC.js"></script>
-    <script type="module" crossorigin src="/assets/article-RT7ZlOs2.js"></script>
+    <script type="module" crossorigin src="/assets/SiteHeader-B455sRiz.js"></script>
+    <script type="module" crossorigin src="/assets/LegalPage-BuhxTNK2.js"></script>
+    <script type="module" crossorigin src="/assets/article-BTZ8-hNG.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/SiteHeader-CxGatjyQ.css">
     <link rel="stylesheet" crossorigin href="/assets/LegalPage-Cgfm6Iel.css">
   </head>
   <body>
     <div id="root"><div class="site"><a class="skip btn btn-secondary" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="logo" href="/" aria-label="MateAI home"><svg viewBox="0 0 512 512" aria-hidden="true" style="width:28px;height:28px"><rect width="512" height="512" rx="112" fill="#f2a516"></rect><g fill="#1f1a17"><rect x="72" y="148" width="64" height="64" rx="16"></rect><rect x="148" y="148" width="64" height="64" rx="16"></rect><rect x="300" y="148" width="64" height="64" rx="16"></rect><rect x="376" y="148" width="64" height="64" rx="16"></rect><rect x="72" y="224" width="64" height="64" rx="16"></rect><rect x="224" y="224" width="64" height="64" rx="16"></rect><rect x="376" y="224" width="64" height="64" rx="16"></rect><rect x="72" y="300" width="64" height="64" rx="16"></rect><rect x="376" y="300" width="64" height="64" rx="16"></rect></g></svg><span>MateAI</span></a><nav aria-label="Main" style="display:contents"><ul class="site-nav"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#privacy">Privacy</a></li><li><a href="/free-plugin/">Free plugin</a></li><li><a href="/roadmap/">Roadmap</a></li><li><a href="/#faq">FAQ</a></li></ul></nav></div></header><main id="main" class="wrap legal"><h1 id="youtube-mcp-server-for-codex-how-to-connect-your-channel">YouTube MCP server for Codex: how to connect your channel</h1>
-<p class="byline">By Máté Góg · Last updated <time datetime="2026-11-08">8 November 2026</time></p>
+<p class="byline">By Máté Góg · Last updated <time datetime="2026-11-12">12 November 2026</time></p>
 
 <p><strong>Short answer:</strong> Codex can use YouTube through an MCP server: a small program on your computer that Codex starts and talks to. The free MateAI plugin is one. You register it in Codex&#39;s <code>~/.codex/config.toml</code> file, but its setup guide covers Claude Code and Antigravity only, so with Codex you do a few steps by hand.</p>
 <p>This page shows those steps, what they&#39;re based on, and what I haven&#39;t tested yet. I built the plugin for my own channel, so I&#39;ll be specific about what it does and where it stops.</p>
 <h2 id="what-is-a-youtube-mcp-server">What is a YouTube MCP server?</h2>
 <p>MCP (Model Context Protocol) is a standard way for an AI app to call tools that live outside it. A YouTube MCP server gives the AI tools like &quot;get my channel snapshot&quot;, &quot;show this video&#39;s retention curve&quot; or &quot;upload this file as a private draft&quot;. The AI decides when to call them; the server does the actual talking to YouTube.</p>
-<p>The MateAI plugin uses Google&#39;s official YouTube Data API and YouTube Analytics API. It runs on your own computer, uses your own free Google quota, and I, the author, receive no data.</p>
+<p>The MateAI plugin uses Google&#39;s official YouTube Data API and YouTube Analytics API. It runs on your own computer, is free within Google&#39;s daily quota, and I, the author, receive no data.</p>
 <h2 id="does-the-free-mateai-plugin-work-with-codex">Does the free MateAI plugin work with Codex?</h2>
 <p>It should, but I haven&#39;t tested it with Codex yet. Here&#39;s why I expect it to work: the server is a plain Python script that speaks standard MCP over stdio, and Codex reads MCP servers from <code>~/.codex/config.toml</code>. MateAI Studio, the Mac app I&#39;m building, is written to register the same server for Codex in exactly that file, with the settings shown below.</p>
 <p>What you get in Codex is the MCP tools only. The plugin&#39;s slash commands, like <code>/yt-setup</code> and <code>/yt-safety</code>, and its bundled skills are Claude Code features, so they don&#39;t appear in Codex. You run the sign-in wizard from Terminal instead.</p>
 <h2 id="how-do-you-connect-youtube-to-codex-step-by-step">How do you connect YouTube to Codex, step by step?</h2>
-<p>Expect about 30 minutes, 15 of them for the Google project. The steps are for a Mac; I haven&#39;t written Codex steps for Windows yet.</p>
+<p>Expect about 15 minutes. The steps are for a Mac; I haven&#39;t written Codex steps for Windows yet.</p>
 <ol>
 <li><p><strong>Install Python 3.10 or newer</strong> and check that <code>python3 --version</code> works in Terminal.</p>
 </li>
@@ -44,11 +44,11 @@
 <pre><code class="language-bash">git clone https://github.com/mategog/mateai-youtube-mcp.git ~/mateai-youtube-mcp
 </code></pre>
 </li>
-<li><p><strong>Make your Google project and sign in.</strong> Google requires everyone who uses its YouTube APIs to create their own &quot;Desktop app&quot; client file and add their email as a test user. The <a href="/free-plugin/">free plugin setup guide</a> walks through every click. Then run the wizard from the plugin folder:</p>
+<li><p><strong>Sign in.</strong> The plugin uses MateAI Studio&#39;s Google-verified sign-in, so there&#39;s no Google project to create. Run the wizard from the plugin folder:</p>
 <pre><code class="language-bash">cd ~/mateai-youtube-mcp
 python3 yt_studio.py setup
 </code></pre>
-<p>It installs Google&#39;s libraries into a local <code>.venv</code>, picks up the client file from your Downloads folder and opens Google&#39;s sign-in page. Your login is saved inside that folder.</p>
+<p>It installs Google&#39;s libraries into a local <code>.venv</code> and opens Google&#39;s sign-in page. Your login is saved inside that folder.</p>
 </li>
 <li><p><strong>Register the server in Codex.</strong> Open <code>~/.codex/config.toml</code> (create it if it doesn&#39;t exist) and add this. Replace <code>you</code> with your Mac username in both paths:</p>
 <pre><code class="language-toml">[mcp_servers.mateai-youtube]
@@ -75,12 +75,11 @@ startup_timeout_sec = 30
 <ul>
 <li><strong>Not tested yet.</strong> The steps above follow the Codex config in MateAI Studio&#39;s code, not a run of the free plugin inside Codex. If something doesn&#39;t work, the plugin&#39;s GitHub issues are the place to tell me.</li>
 <li><strong>Confirmation boxes may not show.</strong> Before risky actions like deleting a video, the plugin asks for confirmation through MCP. I haven&#39;t checked whether Codex shows that box. If a client can&#39;t, the plugin refuses deletes instead of going ahead.</li>
-<li><strong>Sign-in expires about once a week.</strong> Google expires sign-ins after 7 days while your Google project is in &quot;Testing&quot; status. Run <code>python3 yt_studio.py setup</code> again from the plugin folder.</li>
 <li><strong>Uploads stay private.</strong> Videos go up as private drafts or scheduled; you publish them yourself.</li>
-<li><strong>The daily quota is finite.</strong> Google gives 10,000 units a day. Normal questions use little of it, and the quota resets at midnight Pacific time.</li>
+<li><strong>The daily quota is finite.</strong> Google gives the built-in sign-in a free daily quota of 10,000 units, shared by everyone who uses it; heavy users can <a href="https://github.com/mategog/mateai-youtube-mcp#use-your-own-google-cloud-client-optional-own-quota">bring their own Google project</a> for a quota of their own. Normal questions use little of it, and the quota resets at midnight Pacific time.</li>
 </ul>
 <h2 id="is-there-an-easier-way">Is there an easier way?</h2>
-<p>The Google project and the config file are the two steps I wanted to remove, so I&#39;m building <strong>MateAI Studio</strong>: a Mac app that connects your YouTube channel with one click, without your own Google Cloud project, and adds itself to Codex for you. It&#39;s planned for Claude Desktop, Cursor, Google Antigravity and OpenCode too. It&#39;s still in development, not downloadable yet, and free during early access. Testers are invited in small batches.</p>
+<p>Terminal and the config file are the steps I wanted to remove, so I&#39;m building <strong>MateAI Studio</strong>: a Mac app that connects your YouTube channel with one click and adds itself to Codex for you. It&#39;s planned for Claude Desktop, Cursor, Google Antigravity and OpenCode too. It&#39;s still in development, not downloadable yet, and free during early access. Testers are invited in small batches.</p>
 <ul>
 <li>Want it today? Use the <a href="/free-plugin/">free plugin</a> with the steps above.</li>
 <li>Rather wait for the one-click version? <a href="/#early-access">Join the early-access list</a>.</li>

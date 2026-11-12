@@ -1,4 +1,4 @@
-import{h as a,c as n,j as t,r as s}from"./SiteHeader-BMzGqatB.js";import{L as i}from"./LegalPage-CG7L3eKC.js";const r=`# About MateAI
+import{h as o,c as n,j as t,r as s}from"./SiteHeader-B455sRiz.js";import{L as i}from"./LegalPage-BuhxTNK2.js";const r=`# About MateAI
 
 MateAI is made by **Máté Góg**, a one-person developer in Austria. “Máté” is my first name; AI is what I build with.
 
@@ -8,7 +8,7 @@ MateAI is made by **Máté Góg**, a one-person developer in Austria. “Máté�
 
 **The MateAI plugin** is free and works today. It's a small MCP server you install yourself on a Mac or Windows PC, and it gives Claude Code (paid Claude plan) or Google Antigravity the same kind of YouTube tools. The [step-by-step setup guide](/free-plugin/) needs no coding, and the source code is on [GitHub](https://github.com/mategog/mateai-youtube-mcp).
 
-The plugin needs a one-time setup of about 30 minutes, 15 of them for the Google developer project. That fiddly step is why MateAI Studio exists: the app does it for you, so you just sign in with Google.
+The plugin needs a one-time setup of about 15 minutes in Terminal. MateAI Studio skips that: you install the app and sign in with Google.
 
 ## The YouTube channel
 
@@ -24,4 +24,4 @@ I run [MateAI on YouTube](https://www.youtube.com/@mateai-c6m), a build-log chan
 ## Contact
 
 Email me at [gog.mate@gmail.com](mailto:gog.mate@gmail.com), open an issue on the [plugin's GitHub page](https://github.com/mategog/mateai-youtube-mcp/issues), find my other code at [github.com/mategog](https://github.com/mategog), or see the [Impressum](/impressum/) for legal details.
-`,e=document.getElementById("root"),o=t.jsx(s.StrictMode,{children:t.jsx(i,{markdown:r})});e.hasChildNodes()?a(e,o):n(e).render(o);
+`,e=document.getElementById("root"),a=t.jsx(s.StrictMode,{children:t.jsx(i,{markdown:r})});e.hasChildNodes()?o(e,a):n(e).render(a);
